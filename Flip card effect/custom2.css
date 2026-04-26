@@ -1,0 +1,60 @@
+body {
+  background: rgb(180, 179, 179);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 1000px; /* Needed for 3D effect */
+}
+
+.box-content {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  box-shadow: 0px 50px 80px rgba(0,0,0,0.8);
+}
+
+.box-front,
+.box-back {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  backface-visibility: hidden; /* Hide back when not facing viewer */
+  color: #ddd;
+}
+
+.box-front {
+  width: 300px;
+  height: 300px;
+  background: rgb(57, 78, 116,0.59);
+  transform: rotateY(0deg);
+}
+.box-front p{
+    font-size: 50px;
+    text-align: center;
+}
+.box-front h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.box-back {
+  width: 300px;
+  height: 300px;
+  background: #303030;
+  transform: rotateY(180deg);
+}
+
+.box:hover .box-content {
+  transform: rotateY(-180deg);
+}
