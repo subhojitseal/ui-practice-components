@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS animaton 2</title>
+	<style type="text/css">
+		.box-container{
+			width: 350px;
+			height: 350px;
+			border: 2px solid white;
+			border-radius: 200px;
+			margin:auto;
+			position: relative;
+			
+
+		}
+		.box1{
+			width:100px;
+			height:100px;
+			background-color: rgba(190,0,0,0.2);
+			position: absolute;
+			top: 0px;
+			left:0px;
+			border-radius:50px;
+			transform:rotatez(360deg);
+			animation-name: box_anm1;
+			animation-play-state: running;
+			animation-iteration-count: infinite;
+			animation-duration: 4s;
+			animation-direction: alternate-reverse;
+			animation-timing-function: ease-in-out;
+		}
+		.box2{
+			width:90px;
+			height:90px;
+			background-color: rgba(192,192,192,0.4);
+			position: absolute;
+			top: 5px;
+			left:5px;
+			border-radius:50px;
+			animation-name: box_anm2;
+			animation-delay: 0.4s;
+			animation-direction: alternate-reverse;
+			animation-iteration-count: infinite;
+			animation-duration: 4s;
+			animation-play-state: running;
+
+		}
+		.box3{
+			width:80px;
+			height:80px;
+			background-color: rgba(192,192,192,0.6);
+			position: absolute;
+			top: 10px;
+			left:10px;
+			border-radius:50px;
+			animation-name: box_anm2;
+			animation-delay: 0.8s;
+			animation-direction: alternate-reverse;
+			animation-iteration-count: infinite;
+			animation-duration: 4s;
+			animation-play-state: running;
+		}
+		.box4{
+			width:70px;
+			height:70px;
+			background-color: rgba(192,192,192,0.97);
+			position: absolute;
+			top: 15px;
+			left:15px;
+			border-radius:50px;
+			animation-name: box_anm2;
+			animation-delay: 1.2s;
+			animation-direction: alternate-reverse;
+			animation-iteration-count: infinite;
+			animation-duration: 4s;
+			animation-play-state: running ;
+		}
+		@keyframes box_anm1{
+			0%{
+				top:0px;
+				left:0px;
+				background:rgba(190,0,0,0.57);
+			}
+			25%{
+				top:0px;
+				left:250px;
+				background-color: rgba(255,203,0,0.81);
+			}
+			50%{
+				top:250px;
+				left:250px;
+				background-color: rgba(27,161,226,0.47);
+			}
+			75%{
+				top:250px;
+				left:0px;
+				background-color: rgba(164,196,0,0.55)
+			}
+			100%{
+				top:0px;
+				left:0px;
+				background:rgba(190,0,0,0.57);
+			}
+		}
+        @keyframes box_anm2{
+			0%{
+				top:0px;
+				left:0px;
+				background-color: rgba(192,192,192,0.57);
+			}
+			25%{
+				top:0px;
+				left:250px;
+				background-color: rgba(192,192,192,0.57);
+			}
+			50%{
+				top:250px;
+				left:250px;
+				background-color: rgba(192,192,192,0.57);
+			}
+			75%{
+				top:250px;
+				left:0px;
+				background-color: rgba(192,192,192,0.57);
+			}
+			100%{
+				top:0px;
+				left:0px;
+				background-color: rgba(192,192,192,0.57);
+			}
+        }
+	</style>
+</head>
+<body>
+	<div class="box-container">
+		<div class="box1"></div>
+		<div class="box2"></div>	
+		<div class="box3"></div>
+		<div class="box4"></div>		
+	</div>
+
+</body>
+</html>
